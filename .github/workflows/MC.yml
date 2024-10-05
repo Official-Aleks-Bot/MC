@@ -21,7 +21,7 @@ jobs:
       run: echo 'eula=true' > eula.txt
 
     - name: Download Ngrok
-      run: curl -O "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip
+      run: curl -O "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip"
 
     - name: Extract Ngrok
       run: unzip ngrok-v3-stable-linux-amd64.zip

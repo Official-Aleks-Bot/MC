@@ -4,8 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Java
-      run: sudo apt update && sudo apt install openjdk-17-jdk -y
+    - name: Install Java 21
+      run: |
+        sudo apt update
+        sudo apt install wget -y
+        sudo add-apt-repository ppa:linuxuprising/java -y
+        sudo apt update
+        sudo apt install oracle-java21-installer -y
+        sudo apt install oracle-java21-set-default
 
     - name: Download Minecraft Server
       run: curl -o server.jar https://piston-data.mojang.com/v1/objects/450698d1863ab5180c25d7c804ef0fe6369dd1ba/server.jar

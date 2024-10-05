@@ -22,9 +22,7 @@ jobs:
 
     - name: Create ops.json
       run: |
-        $MCUSER
-      env:
-        MCUSER: ${{ secrets.MCUSER }}
+        echo '[{"uuid":"b34e3fe7-9ecf-429a-95c4-3160649c3555","name":"IEatHex__","level":4,"bypassesPlayerLimit":false}]' > ops.json
 
     - name: Download Ngrok
       run: curl -O "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip"
